@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[]args){
+		int n;
+		String p, p2 = null;
+		Scanner entrada = new Scanner(System.in);
+		
+      n = entrada.nextInt();
+			  for(int i = 0; i<n; i++){
+				  p = entrada.next().toUpperCase();
+					  if(p.length()==3){
+						  if(p.startsWith("UR")){
+							  if(p2==null){
+								  p2="URI";
+							  }
+							else{ 
+								p2 = p2 + " URI" ;
+							}	
+						}
+						else if(p.startsWith("OB")){
+							if(p2==null){
+								p2="OBI";
+							}
+							 else {
+								p2 = p2 + " OBI" ;
+							}
+						}
+						  else{
+							  if(p2==null){
+								  p2=p;
+							  }
+							  else {
+								  p2 = p2 +" " +p;
+							  }
+					    }
+					}
+          
+					else{
+						if(p2==null){
+							p2=p;
+						}
+						else {
+							p2 = p2 +" " +p;
+						}
+					}	
+		}
+			System.out.println(p2);
+  }
+}
+
+
