@@ -1,0 +1,51 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+       int n; // rodadas
+
+	    String p1; // escolha do jogador 1
+	    String p2; // escolha do jogador 2
+	    Scanner entrada = new Scanner(System.in);
+	    n = entrada.nextInt();
+	
+	    for(int i = 0; i < n; i++){
+		    p1 = entrada.next();
+		    p2 = entrada.next();
+		    if(p1.equals("ataque") || p1.equals("pedra") || p1.equals("papel") && p2.equals("ataque") || p2.equals("pedra") || p2.equals("papel") ){
+			
+			
+				if(p1.equals("ataque") && p2.equals("pedra")){
+					System.out.println("Jogador 1 venceu");
+				}
+				if(p1.equals("pedra") && p2.equals("ataque")){
+				System.out.println("Jogador 2 venceu");
+				}
+				if(p1.equals("pedra") && p2.equals("papel")){
+					System.out.println("Jogador 1 venceu");
+				}
+				if(p1.equals("papel") && p2.equals("pedra")){
+					System.out.println("Jogador 2 venceu");
+				}
+				if(p1.equals("ataque") && p2.equals("papel")){
+					System.out.println("Jogador 1 venceu");
+				}
+				if(p1.equals("papel") && p2.equals("ataque")){
+					System.out.println("Jogador 2 venceu");
+				}
+				if(p1.equals("papel") && p2.equals("papel")){
+					System.out.println("Ambos venceram");
+				}
+				if(p1.equals("pedra") && p2.equals("pedra")){
+					System.out.println("Sem ganhador");
+				}
+				if(p1.equals("ataque") && p2.equals("ataque")){
+					System.out.println("Aniquilacao mutua");
+				}
+		  }
+	  }
+  }
+}
