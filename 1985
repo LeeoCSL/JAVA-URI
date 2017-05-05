@@ -1,0 +1,41 @@
+import java.io.IOException;
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+      Scanner entrada = new Scanner (System.in);	
+	    int p; // produto
+	    double qcod; // quantidade
+	    double cod; //codigo do produto
+	    double total = 0;
+	
+	    p = entrada.nextInt();
+	    while( p > 0){
+	    cod = entrada.nextInt();
+	    qcod = entrada.nextInt();
+	
+	      if(cod==1001){
+          total=total+(qcod*1.50);
+        }
+        if(cod==1002){
+          total=total+(qcod*2.50);
+        }
+        if(cod==1003){
+          total=total+(qcod*3.50);
+        }
+        if(cod==1004){
+          total=total+(qcod*4.50);
+        }
+        if(cod==1005){
+          total=total+(qcod*5.50);
+        }
+      p--;
+  	  }
+  	 DecimalFormat df = new DecimalFormat("0.00");
+  	 System.out.println(df.format(total));
+   
+    }
+  }
