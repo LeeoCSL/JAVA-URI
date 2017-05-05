@@ -1,0 +1,19 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+     public static void main(String[] args) throws IOException {
+ 
+      long n; // numero de lados
+		  long l; // tamanho do lado
+		  long p;
+		  Scanner entrada = new Scanner(System.in);
+		  n = entrada.nextInt();
+	  	l = entrada.nextInt();
+		  if (n >= 3 && n <= 1000000 && l >= 1 && l <= 4000){
+  		  p = l * n;
+	      System.out.println(p);
+		  }
+    }
+}
