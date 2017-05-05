@@ -1,0 +1,22 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+	
+    int n, x, i;
+	  Scanner entrada = new Scanner(System.in);
+  	n = entrada.nextInt();
+  	for (i=0; i<n; i++){
+		  x = entrada.nextInt();
+	     if (x>2014){
+		     System.out.println(x-2014 + " A.C.");
+      }
+    	else{
+		    System.out.println(2015 - x + " D.C.");
+	    }
+    	}
+   }
+}
+
