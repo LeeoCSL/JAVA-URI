@@ -1,0 +1,24 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+    String p = "";
+	
+	  Scanner entrada = new Scanner(System.in);
+	    
+      while (p.length() < 1 || p.length() > 500){
+		    p = entrada.nextLine();
+		  }
+	
+		  if(p.length() <= 80){
+			  System.out.println("YES");
+		  }
+		  else if(p.length() > 80){
+		  	System.out.println("NO");
+		  }
+ 
+    }
+ 
+}
